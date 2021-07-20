@@ -48,7 +48,7 @@
 
 # products テーブル
 | Column            | Type       | Options                         |
-| ----------------  | ------     | ------------------------------- |
+| ----------------  | ------     | --------------------------------|
 | name              | string     | null: false                     |
 | user              | references | null: false, foreign_key: true  |
 | price             | integer    | null: false                     |
@@ -58,6 +58,7 @@
 | shipping_id       | integer    | null: false                     |
 | delivery_area_id  | integer    | null: false                     |
 | delivery_date_id  | integer    | null: false                     |
+| amallcategory_id  | integer    | null: false                     |
 
 # Association
 - belongs_to :user
