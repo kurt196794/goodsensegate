@@ -50,7 +50,8 @@ class ProductsController < ApplicationController
   end
 
   def set_product_sold_blank?
-    redirect_to root_path unless current_user.id == @product.user_id && @Product.sold.blank?
+    redirect_to root_path unless current_user.id == @product.user_id 
+    #redirect_to root_path unless current_user.id == @product.user_id && @Product.sold.blank?
   end
 
 end

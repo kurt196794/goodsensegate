@@ -26,15 +26,15 @@
     </div>
 
  
-  <%# if user_signed_in? && @product.sold.blank? %>
-     <%# <%if current_user.id == @product.user_id %>
-        <%#= link_to "商品の編集", edit_item_path, method: :get, class: "item-red-btn" %>
-        <%# <p class="or-text">or</p> %>
-       <%#= link_to "削除", item_path(@item), method: :delete, class:"item-destroy" %>
-     <%# else%>
-       <%#= link_to "購入画面に進む",  item_orders_path(@item), class:"item-red-btn"%>
-      <%# end%> 
-  <%#end%>
+  <% if user_signed_in?  %>
+      <%if current_user.id == @product.user_id %>
+        <%= link_to "商品の編集", edit_product_path, method: :get, class: "item-red-btn" %>
+         <p class="or-text">or</p> 
+       <%= link_to "削除", product_path(@product), method: :delete, class:"item-destroy" %>
+     <% else%>
+       <%#= link_to "購入画面に進む",  product_orders_path(@product), class:"item-red-btn"%>
+      <% end%> 
+  <%end%>
 
 
     <div class="item-explain-box">
@@ -106,7 +106,7 @@
   </div>
  
   <a href="#" class="another-item"><%= @product.category.name %>をもっと見る</a>
- 
+  <%= link_to "TOPPAGE", root_path, method: :get, class: "another-item" %>
 </div>
 
 <%#= render "shared/footer" %>
