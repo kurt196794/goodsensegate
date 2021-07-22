@@ -33,9 +33,7 @@
       <%#= link_to image_tag("google-play.png", class:"google-btn"), "#" %>
     </div>
   </div>
-  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
 
-  <%# FURIMAが選ばれる3つの理由部分 %>
   <div class='select-reason-contents'>
     <h2 class='title'>
       FURIMAが選ばれる3つの理由
@@ -76,9 +74,7 @@
       </li>
     </ul>
   </div>
-  <%# /FURIMAが選ばれる3つの理由部分 %>
 
-  <%# 画面中央の「会員数日本一位」帯部分 %>
   <div class='ad-contents'>
     <h2 class='ad-title'>
       会員数日本一位
@@ -144,37 +140,37 @@
       <ul class='item-lists'>
       <% @products.each do |i| %>
        <li class='list'>
-        <%#= link_to  item_path(item.id) do %>
-        <div class='item-img-content'>
+        <%= link_to  product_path(i.id) do %>
+         <div class='item-img-content'>
           <%= image_tag i.image, class: "item-img" %>
 
-          <%#if item.sold.present?%>
-           <div class='sold-out'>
+          <%#= if product.sold.present?%>
+           <%# <div class='sold-out'>
             <span>Sold Out!!</span>
-           </div>
+           </div> %>
           <%#end%>
 
 
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
+          </div>
+          <div class='item-info'>
+           <h3 class='item-name'>
             <%= i.name %>
-          </h3>
-          <div class='item-price'>
+           </h3>
+           <div class='item-price'>
             <span><%= i.price %>円<br>
             <div class='star-btn'>
               <%#= image_tag "star.png", class:"star-icon" %>
               <span class='star-count'>0</span>
             </div>
           </div>
-        </div>
+         </div>
         <%# end %>
-       </li>
-      <%# end %>
+        </li>
+      <% end %>
 
-      <%#if @items.length == 0 %>
+      <% if @products.length == 0 %>
 
-      <li class='list'>
+       <li class='list'>
         <%#= link_to '#' do %>
         <%#= link_to image_tag("sample.jpg", class:"item-img"), "#" %>
         <div class='item-info'>
@@ -189,15 +185,15 @@
             </div>
           </div>
         </div>
-        <%# end %>
-      </li>
+        <% end %>
+       </li>
       <% end %>
     </ul>
   </div>
   <%# /商品一覧 %>
-</div>
-<%= link_to(new_product_path, class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>出品する</span>
-  <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-<% end %>
+ </div>
+ <%= link_to(new_product_path, class: 'purchase-btn') do %>
+   <span class='purchase-btn-text'>出品する</span>
+   <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+ <% end %>
 <%#= render "shared/footer" %>
