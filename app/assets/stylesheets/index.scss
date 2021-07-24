@@ -1,3 +1,7 @@
+body{
+  color: #000;
+}
+
 a {
   text-decoration: none;
 }
@@ -6,20 +10,8 @@ a {
   background: #f8f8f8;
 }
 
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .title-contents {
-  width: 100vw;
-  background-image: image-url('furima-header01.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  clear: both;
 }
 
 .service-title {
@@ -31,10 +23,35 @@ a {
   line-height: 40px;
 }
 
-.store-btn {
+.sign-up {
+  float: right;
+  width: 20%;
+}
+
+.sign-up a{
+  text-decoration: underline;
+  color: #000;
+}
+
+.logout {
+  display: block;
+  background: #eee;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+  text-decoration: none!important;
+  width: 50%;
+}
+
+.gnav {
   display: flex;
   margin-top: 24px;
 }
+.gnav li{
+  text-decoration: none!important;
+}
+
 
 .apple-btn {
   margin-right: 1vw;
@@ -43,6 +60,36 @@ a {
 
 .google-btn {
   height: 9vh;
+}
+
+.newitems {
+  margin: 100px 0 15px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+}
+
+.productBox {
+  width: 25%;
+  margin: 20px;
+  text-align: center;
+}
+
+.productName, .price {
+  display: block;
+  margin: 10px;
+  text-align: left;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #C1292E;
 }
 
 /* //画面上部の「人生を変えるフリマアプリ」帯部分 */
@@ -86,8 +133,7 @@ a {
 }
 
 .list-pict {
-  margin-bottom: 20px;
-  width: 100%;
+    width: 75%;
 }
 
 .reason-list-number {
@@ -147,7 +193,7 @@ a {
   line-height: 30px;
 }
 
-.store-btn {
+.gnav {
   display: flex;
   margin-top: 24px;
 }
