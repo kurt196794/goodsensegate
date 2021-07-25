@@ -1,18 +1,23 @@
+html{
+  font-size: 62.5%;
+}
+
 body{
   color: #000;
+  font-size: 1.5rem;
+}
+
+.main{
+  width: 100%;
+  min-width: 1000px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
 }
 
-.main {
-  background: #f8f8f8;
-}
-
-.title-contents {
-  clear: both;
-}
 
 .service-title {
   font-size: 8vh;
@@ -25,33 +30,59 @@ a {
 
 .sign-up {
   float: right;
-  width: 20%;
+  text-align: right;
+  padding-right: 50px;
 }
+
 
 .sign-up a{
   text-decoration: underline;
   color: #000;
 }
 
-.logout {
-  display: block;
+.log_out {
   background: #eee;
   padding: 15px;
   text-align: center;
   font-weight: bold;
-  margin: 10px;
+  margin: 5rem 0;
   text-decoration: none!important;
-  width: 50%;
+  width: 10%;
+  float: right;
+}
+
+.log_out:after, .sign-up:after{
+  content: '';
+    display: table;
+    clear: both;
+}
+
+.logo{
+  margin: 0auto;
+  text-align: center;
+}
+
+.logo img{
+  width: 25%;
+  height: auto;
+
 }
 
 .gnav {
+  margin: 50px auto;
   display: flex;
-  margin-top: 24px;
+  width: 500px;
+  justify-content: space-between;
 }
 .gnav li{
-  text-decoration: none!important;
+  list-style: none;
+  width: 350px;
+    text-align: center;
 }
 
+.gnav a{
+  padding: 20px;
+}
 
 .apple-btn {
   margin-right: 1vw;
@@ -63,7 +94,7 @@ a {
 }
 
 .newitems {
-  margin: 100px 0 15px;
+  margin: 15rem 0 1.5rem;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
@@ -72,97 +103,134 @@ a {
 .product {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
 
-.productBox {
+.productBox, .item-lists .list {
   width: 25%;
   margin: 20px;
   text-align: center;
 }
 
-.productName, .price {
+.productName, .price, .item-name {
   display: block;
   margin: 10px;
   text-align: left;
+  padding-left: 4.5rem;
 }
 
-.price {
+.price, .item-price {
   font-weight: bold;
   font-size: 20px;
-  color: #C1292E;
 }
 
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
-
-/* FURIMAが選ばれる3つの理由部分 */
-.select-reason-contents {
-  padding: 5vh 15vw;
+footer {
+  max-width: 1200px;
+  margin: 200px auto 0;
 }
 
-.select-reason-contents>.title {
-  text-align: center;
-  font-size: 3.5vh;
+.bland .title {
+  border-bottom: 1px solid #000;
+  padding: 0 0 1.5rem 0;
+  font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.bland-list{
+  display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    margin-top: 2.5rem;
+    padding-left: 0;
+}
+
+.bland-list li{
+  width: calc(100% / 5);
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.ft-menu {
+  margin-top: 10rem;
+}
+
+.ft-menu .title {
+  margin: 2rem 0;
   font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
 }
 
-.select-reason-contents>.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.reason-lists {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.reason-lists>.list {
-  width: 33vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.list-pict {
+.list-pict, .item-img {
     width: 75%;
 }
 
-.reason-list-number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 60px;
-  background-color: #3ccace;
-  color: #fff;
-}
+// .select-reason-contents {
+//   padding: 5vh 15vw;
+// }
 
-.reason-list-text {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 50px;
-}
+// .select-reason-contents>.title {
+//   text-align: center;
+//   font-size: 3.5vh;
+//   font-weight: bold;
+//   margin-bottom: 5vh;
+//   position: relative;
+// }
 
-.reason-list-blue-text {
-  color: #3ccace;
-}
+// .select-reason-contents>.title::after {
+//   content: '';
+//   width: 70px;
+//   height: 4px;
+//   background-color: #3ccace;
+//   position: absolute;
+//   bottom: -10px;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
 
-.reason-list-description {
-  font-size: 18px;
-  margin-top: 20px;
-}
+// .reason-lists {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
+
+// .reason-lists>.list {
+//   width: 33vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   position: relative;
+// }
+
+
+
+// .reason-list-number {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 60px;
+//   height: 60px;
+//   font-size: 30px;
+//   text-align: center;
+//   line-height: 60px;
+//   background-color: #3ccace;
+//   color: #fff;
+// }
+
+// .reason-list-text {
+//   font-weight: bold;
+//   font-size: 24px;
+//   line-height: 50px;
+// }
+
+// .reason-list-blue-text {
+//   color: #3ccace;
+// }
+
+// .reason-list-description {
+//   font-size: 18px;
+//   margin-top: 20px;
+// }
 
 /* //FURIMAが選ばれる3つの理由部分 */
 
@@ -183,19 +251,18 @@ a {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.ad-title {
-  font-size: 5vh;
-  margin-bottom: 2vh;
-}
+// .ad-title {
+//   font-size: 5vh;
+//   margin-bottom: 2vh;
+// }
 
-.ad-explain {
-  font-size: 2.5vh;
-  line-height: 30px;
-}
+// .ad-explain {
+//   font-size: 2.5vh;
+//   line-height: 30px;
+// }
 
 .gnav {
-  display: flex;
-  margin-top: 24px;
+  margin-top: 50px;
 }
 
 .apple-btn {
@@ -207,12 +274,10 @@ a {
   height: 9vh;
 }
 
-/* //画面中央の「会員数日本一位」帯部分 */
 
-/* FURIMAの特徴 */
-.feature-contents {
-  padding: 5vh 15vw;
-}
+// .feature-contents {
+//   padding: 5vh 15vw;
+// }
 
 .feature-contents>.title {
   text-align: center;
@@ -233,11 +298,11 @@ a {
   transform: translateX(-50%);
 }
 
-.feature-lists {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+// .feature-lists {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
 
 .feature-lists>.list {
   width: 33vh;
@@ -275,24 +340,23 @@ a {
   font-weight: bold;
 }
 
-.item-contents>.subtitle {
-  font-size: 3vh;
-  margin: 1vh 0;
-  text-decoration: none;
-  color: #3ccace;
-  font-weight: bold;
-}
+// .item-contents>.subtitle {
+//   font-size: 3vh;
+//   margin: 1vh 0;
+//   text-decoration: none;
+//   color: #3ccace;
+//   font-weight: bold;
+// }
 
 .item-lists {
-  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 5rem auto;
 }
 
 .item-lists>.list {
-  width: 37vh;
-  padding: 1vw;
+  list-style: none;
   background-color: #FFF;
 }
 
@@ -301,23 +365,23 @@ a {
   position: relative;
 }
 
-.item-img {
-  width: 33vh;
-  height: 33vh;
-}
+// .item-img {
+//   width: 33vh;
+//   height: 33vh;
+// }
 
 .sold-out {
   position: absolute;
-  top: 40%;
-  width: 100%;
+  top: 0;
+  width: 20%;
   text-align: center;
   background-color: crimson;
-  transform: skewY(-10deg);
+
 }
 
 .sold-out>span {
   color: #FFF;
-  font-size: 45px;
+  font-size: 1.5rem;
   font: bold;
 }
 
@@ -329,11 +393,12 @@ a {
 }
 
 .item-name {
-  font-size: 2.5vh;
+  padding-left: 0;
+  font-weight: normal;
+  margin: 1rem 0;
 }
 
 .item-price {
-  font-size: 1.5vh;
   display: flex;
   justify-content: space-between;
 }
@@ -354,4 +419,7 @@ a {
   font-size: 2vh;
 }
 
-/* //商品一覧 */
+
+ .title-contents {
+   clear: both;
+ }

@@ -2,21 +2,27 @@
 <div class='main'>
 
 
-<div class='sign-up'>
     <%# <ul class='lists-left'> %>
       <%# <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li> 
       <%# <li><%= link_to 'ブランド', "#", class: "brand-list" %></li> 
     <%# </ul> %>
     <%# <ul class='lists-right'> %>
        <% if user_signed_in? %>
-        <%= link_to current_user.nickname, class: "user-nickname"  %>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %>
+         <div class='sign-up'>
+         <%= link_to current_user.nickname, class: "user-nickname"  %>
+         </div>
+         <div class="log_out">
+         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %>
+         </div>
        <% else %>
-        <%= link_to 'ログイン', new_user_session_path, class: "login" %>
-        <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+         <div class="log_in">
+         <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+         </div>
+         <div class="sign_up">
+         <%= link_to '新規登録', new_user_registration_path, class: "signup" %>
+         </div>
       <% end %>
     <%# </ul> %>
-  </div>
 
   <div class='title-contents'>
     <h2 class='service-title'>
@@ -28,6 +34,15 @@
     <p class='service-explain'>
       <%# フリマアプリです %>
     </p>
+
+ 
+    <%= render "other/logo" %>
+    <%# <div class= "logo">
+     <%= image_tag "unnamed.png", class:"logo_index" %>
+     <%# </div> %> 
+
+
+
     <div class='gnav'>
       <%#= link_to image_tag("app-store.svg", class:"apple-btn"), "#" %>
       <%#= link_to image_tag("google-play.png", class:"google-btn"), "#" %>
@@ -73,25 +88,7 @@
         </div>
       </div>
 
-      <footer>
-        <div class="bland">
-          <div class="title">BLAND</div>
-          <ul>
-              <li>ブランド名ブランド名</li>
-              <li>ブランド名ブランド名</li>
-              <li>ブランド名ブランド名</li>
-          </ul>
-        </div>
-
-        <div class="ft-menu">
-          <div class="title">お支払い方法</div>
-          <div class="title">ダミーテキストダミー</div>
-        </div>
-      
-      
-      
-      </footer>
-
+  
   <%# <div class='select-reason-contents'>
     <h2 class='title'>
       FURIMAが選ばれる3つの理由
@@ -207,10 +204,9 @@
 
           <%if i.soldout.present?%>
             <div class='sold-out'>
-            <span>Sold Out!!</span>
+            <span>Sold Out</span>
            </div> 
           <%end%>
-
 
           </div>
           <div class='item-info'>
@@ -221,7 +217,7 @@
             <span><%= i.price %>円<br>
             <div class='star-btn'>
               <%#= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+              <span class='star-count'>✩</span>
             </div>
           </div>
          </div>
@@ -253,6 +249,24 @@
   </div>
   <%# /商品一覧 %>
  </div>
+
+   <footer>
+        <div class="bland">
+          <div class="title">BLAND</div>
+          <ul class="bland-list">  
+              <li>ブランド名ブランド名</li> 
+              <li>ブランド名ブランド名</li>
+              <li>ブランド名ブランド名</li>
+          </ul>
+        </div>
+         <div class="ft-menu">
+          <div class="title">お支払い方法</div>
+          <div class="title">ダミーテキストダミー</div>
+        </div>
+      
+      
+      
+      </footer>
  <%#= link_to(new_product_path, class: 'purchase-btn') do %>
  <%= link_to"出品", new_product_path, class: 'purchase-btn' %>
    <%# <span class='purchase-btn-text'>出品する</span> %>
