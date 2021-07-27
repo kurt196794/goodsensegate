@@ -1,11 +1,9 @@
-<%#= render "shared/header" %>
-    <%= render "other/logo" %>
+
+<%= render "other/logo" %>
 
 <div class="item-show">
   <div class="item-box">
-    <%# <h2 class="name">
-      <%= @product.name %>
-    <%# </h2> %> 
+ 
     <div class="item-img-content">
       <%= image_tag @product.image ,class:"item-box-img" %>
 
@@ -15,9 +13,7 @@
        </div> 
        <%end%>
 
-    <h2 class="name">
-      <%= @product.name %>
-    </h2>
+    <h2 class="name"><%= @product.name %></h2>
 
 
     <div class="item-explain-box">
@@ -26,8 +22,8 @@
     <table class="detail-table">
       <tbody>
         <tr>
-          <th class="detail-item">出品者</th>
-          <td class="detail-value"><%= @product.user.nickname %></td>
+          <th class="detail-item">Seller name</th>
+          <td class="detail-value"><%= @product.user.nickname %>様</td>
         </tr>
         <tr>
           <th class="detail-item">category</th>
@@ -56,9 +52,9 @@
      
   <% if user_signed_in?  && @product.soldout.blank? %>
       <%if current_user.id == @product.user_id %>
-        <%= link_to "編集", edit_product_path, method: :get, class: "item-red-btn" %>
+        <%= link_to "編集ページ", edit_product_path, method: :get, class: "item-red-btn" %>
          <%# <p class="or-text">or</p>  %>
-       <%= link_to "削除", product_path(@product), method: :delete, class:"item-destroy" %>
+       <%= link_to "出品の取り消し", product_path(@product), method: :delete, class:"item-destroy" %>
      <% else%>
        <%= link_to "ADD TO CART",   product_neworders_path(@product), class:"item-red-btn"%>
       <% end%> 
@@ -93,6 +89,10 @@
       </button>
     </form>
   </div>
+
+       <% if @product.soldout.present? %>
+ 　　　<%= link_to "出品の取り消し", product_path(@product), method: :delete, class:"item-destroy" %>
+       <%end%>
   <%# <div class="links">
     <a href="#" class="change-item-btn">
       ＜ 前の商品

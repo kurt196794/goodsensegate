@@ -7,6 +7,7 @@ body{
   font-size: 1.5rem;
 }
 
+
 .main{
   width: 100%;
   min-width: 1000px;
@@ -31,7 +32,8 @@ a {
 .sign-up {
   float: right;
   text-align: right;
-  padding-right: 50px;
+  padding-right: 2rem;
+  font-size: 2vh;
 }
 
 
@@ -45,10 +47,11 @@ a {
   padding: 15px;
   text-align: center;
   font-weight: bold;
-  margin: 5rem 0;
+  margin: 2rem;
   text-decoration: none!important;
   width: 10%;
   float: right;
+  clear: right;
 }
 
 .log_out:after, .sign-up:after{
@@ -165,77 +168,7 @@ footer {
     width: 75%;
 }
 
-// .select-reason-contents {
-//   padding: 5vh 15vw;
-// }
 
-// .select-reason-contents>.title {
-//   text-align: center;
-//   font-size: 3.5vh;
-//   font-weight: bold;
-//   margin-bottom: 5vh;
-//   position: relative;
-// }
-
-// .select-reason-contents>.title::after {
-//   content: '';
-//   width: 70px;
-//   height: 4px;
-//   background-color: #3ccace;
-//   position: absolute;
-//   bottom: -10px;
-//   left: 50%;
-//   transform: translateX(-50%);
-// }
-
-// .reason-lists {
-//   display: flex;
-//   justify-content: space-between;
-//   flex-wrap: wrap;
-// }
-
-// .reason-lists>.list {
-//   width: 33vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   position: relative;
-// }
-
-
-
-// .reason-list-number {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 60px;
-//   height: 60px;
-//   font-size: 30px;
-//   text-align: center;
-//   line-height: 60px;
-//   background-color: #3ccace;
-//   color: #fff;
-// }
-
-// .reason-list-text {
-//   font-weight: bold;
-//   font-size: 24px;
-//   line-height: 50px;
-// }
-
-// .reason-list-blue-text {
-//   color: #3ccace;
-// }
-
-// .reason-list-description {
-//   font-size: 18px;
-//   margin-top: 20px;
-// }
-
-/* //FURIMAが選ばれる3つの理由部分 */
-
-
-/* 画面中央の「会員数日本一位」帯部分*/
 .ad-contents {
   width: 100vw;
   background-image: image-url('furima-header02.png');
@@ -251,15 +184,7 @@ footer {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-// .ad-title {
-//   font-size: 5vh;
-//   margin-bottom: 2vh;
-// }
 
-// .ad-explain {
-//   font-size: 2.5vh;
-//   line-height: 30px;
-// }
 
 .gnav {
   margin-top: 50px;
@@ -275,9 +200,6 @@ footer {
 }
 
 
-// .feature-contents {
-//   padding: 5vh 15vw;
-// }
 
 .feature-contents>.title {
   text-align: center;
@@ -298,11 +220,6 @@ footer {
   transform: translateX(-50%);
 }
 
-// .feature-lists {
-//   display: flex;
-//   justify-content: space-between;
-//   flex-wrap: wrap;
-// }
 
 .feature-lists>.list {
   width: 33vh;
@@ -322,9 +239,7 @@ footer {
   margin-top: 20px;
 }
 
-/* //FURIMAの特徴 */
 
-/* 商品一覧 */
 
 .item-contents {
   background-color: #FFF;
@@ -340,19 +255,13 @@ footer {
   font-weight: bold;
 }
 
-// .item-contents>.subtitle {
-//   font-size: 3vh;
-//   margin: 1vh 0;
-//   text-decoration: none;
-//   color: #3ccace;
-//   font-weight: bold;
-// }
+
 
 .item-lists {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 5rem auto;
+  margin: 0 auto;
 }
 
 .item-lists>.list {
@@ -365,14 +274,10 @@ footer {
   position: relative;
 }
 
-// .item-img {
-//   width: 33vh;
-//   height: 33vh;
-// }
 
 .sold-out {
   position: absolute;
-  top: 0;
+  top: 40%;
   width: 20%;
   text-align: center;
   background-color: crimson;
@@ -395,7 +300,6 @@ footer {
 .item-name {
   padding-left: 0;
   font-weight: normal;
-  margin: 1rem 0;
 }
 
 .item-price {
@@ -423,3 +327,21 @@ footer {
  .title-contents {
    clear: both;
  }
+
+ .sell_btn{
+    width: 200px;
+    position: fixed;
+    right: -3rem;
+    bottom: 15rem;
+    z-index: 1;
+    font-size: larger;
+    background:#eee;
+    list-style: none;
+  }
+
+ 
+.purchase-btn{
+  color:black;
+  font-size: 2vh;
+
+}
