@@ -20,6 +20,7 @@ a {
 }
 
 
+
 .service-title {
   font-size: 8vh;
 }
@@ -33,7 +34,7 @@ a {
   float: right;
   text-align: right;
   padding-right: 2rem;
-  font-size: 2vh;
+  font-size: 20px;
 }
 
 
@@ -49,7 +50,7 @@ a {
   font-weight: bold;
   margin: 2rem;
   text-decoration: none!important;
-  width: 10%;
+  width: 5%;
   float: right;
   clear: right;
 }
@@ -166,6 +167,7 @@ footer {
 
 .list-pict, .item-img {
     width: 75%;
+
     
 }
 
@@ -330,7 +332,7 @@ footer {
  }
 
  .sell_btn{
-    width: 200px;
+    width: 170px;
     position: fixed;
     right: -3rem;
     bottom: 15rem;
@@ -338,11 +340,16 @@ footer {
     font-size: larger;
     background:#eee;
     list-style: none;
+    text-align: center;
+    height: 200px;
+    
   }
 
  
 .purchase-btn{
   color:black;
   font-size: 2vh;
-
+  margin-top: 40%;
+  margin-right: 15px;
+  display: block;
 }
