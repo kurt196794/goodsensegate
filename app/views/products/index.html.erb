@@ -1,8 +1,6 @@
 
 <div class='main'>
 
-
-
        <% if user_signed_in? %>
          <div class="sign-up"> 
          <%= link_to  "#{current_user.nickname}" , class: "user-nickname" %>
@@ -18,34 +16,34 @@
          <%= link_to '新規登録', new_user_registration_path, class: "signup" %>
          </div>
       <% end %>
-  
+ 
 
-  <div class='title-contents'>
-    <h2 class='service-title'>
-    </h2>
-    <p class='service-explain'>
-    </p>
-    <p class='service-explain'>
-    </p>
-    <%= render "other/logo" %>
+   <div class='title-contents'>
+     <h2 class='service-title'>
+     </h2>
+      <p class='service-explain'>
+      </p>
+     <p class='service-explain'>
+     </p>
+     <%= render "other/logo" %>
 
-    <div class='gnav'>
+     <div class='gnav'>
       <li><%= link_to 'Category', "#", class: "category-list" %></li> 
       <li><%= link_to 'Brand', "#", class: "brand-list" %></li>
       <li><%= link_to 'Mens', "#", class: "brand-list" %></li>
       <li><%= link_to 'Women', "#", class: "brand-list" %></li>
       <li><%= link_to 'Allitems', "#", class: "brand-list" %></li>
-    </div>
+     </div>
+   </div>
+
+  <div class="sell_btn">
+    <%= link_to new_product_path, class: 'purchase-btn' do %>
+    出品する<br>
+    sell page
+    <%end%>
   </div>
 
- <div class="sell_btn">
-   <%= link_to new_product_path, class: 'purchase-btn' do %>
-   出品する<br>
-   sell page
-   <%end%>
-  </div>
-
-       <div class="newitems">New Items</div>
+    <div class="newitems">New Items</div>
       <div class="product">
         <div class="productBox">
              <%= image_tag "DSC02062.JPG", class:"list-pict" %>
@@ -63,7 +61,8 @@
            <span class="price">¥10,000</span>
         </div>
       </div>
-            <div class="product">
+
+      <div class="product">
         <div class="productBox">
          <%= image_tag "DSC02071.JPG", class:"list-pict" %>
           <span class="productName">oxford shirt</span>
@@ -78,8 +77,8 @@
          <%= image_tag "DSC02144.JPG", class:"list-pict" %>  
           <span class="productName">indigo cardigan</span>
            <span class="price">¥10,000</span>
-        </div>
       </div>
+     </div> 
 
       <ul class='item-lists'>
       <% @products.each do |i| %>
@@ -110,25 +109,6 @@
           <%# end %>
          </li>
         <% end %>
-
- 
-
-        <%# <% if @products.length == 0 %>
-
-         <%# <li class='list-no-product'>
-           <div class='item-info'>
-            <h3 class='item-name'>
-             商品を出品してください
-             </h3>
-            <div class='item-price'>
-            <span>99999999円<br>(税込み)</span>
-             <div class='star-btn'>
-              <span class='star-count'>0</span>
-            </div>
-           </div>
-          </div>
-         <% end %> 
-        <%# </li>  %>
       <% end %>
      </ul>
    </div>
@@ -173,7 +153,7 @@
       
       
       
-      </footer>
+  </footer>
 
  <%# <%= link_to"出品", new_product_path, class: 'purchase-btn' %> 
        Copyright (C)goodlifestandard All Rights Reserved.
