@@ -5,14 +5,28 @@
 古着屋、一般から値打ち、価値のあるヴィンテージを出品、購入機能によりヴィンテージアイテムのEC市場活性化を図る。
 マス、オピニオンリーダー以上のファッションファンをターゲットにし、ヴィンテージアイテム専門による差別化を図った販売サイトです。
 
+
+・工夫したポイント
+ ロゴはAdobe Illustratorにて作成しています。
+
+ JavaScript、pay.jpを用いたクレジットでの購入機能が実装されています。
+ （テスト用クレジット番号:4242424242424242）
+
+ デプロイはAWSサーバーを使用しています。
+
+・使用技術(開発環境) rails,  JavaScript, github, AWS EC2, Adobe Illustrator
+
+.テスト用アカウント:
+e_mail kuma@kuma pass 111qqq
+
 # github
+・アプリURL:http://18.181.57.10
 
 
 
 * Ruby version _6.0.0_
 
 * Database initialization 'mysql2', '0.5.3'
-
 
 
 * System dependencies
