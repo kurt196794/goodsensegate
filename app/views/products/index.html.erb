@@ -47,39 +47,40 @@
       <div class="product">
         <div class="productBox">
              <%= image_tag "DSC02062.JPG", class:"list-pict" %>
-          <span class="productName">90's coach jacket</span>
+          <span class="productName">90's coach jacket(テスト・ダミー)</span>
            <span class="price">¥10,000</span>
         </div>
         <div class="productBox">
             <%= image_tag "DSC02114.JPG", class:"list-pict" %>
-          <span class="productName">monotone T shirt</span>
+          <span class="productName">monotone T shirt(テスト・ダミー)</span>
            <span class="price">¥10,000</span>
         </div>
         <div class="productBox">
              <%= image_tag "DSC02129.JPG", class:"list-pict" %> 
-          <span class="productName">80's euro used denim</span>
+          <span class="productName">80's euro used denim(テスト・ダミー)</span>
            <span class="price">¥10,000</span>
         </div>
       </div>
 
-      <div class="product">
+      <%# <div class="product">
         <div class="productBox">
          <%= image_tag "DSC02071.JPG", class:"list-pict" %>
-          <span class="productName">oxford shirt</span>
+          <%# <span class="productName">oxford shirt</span>
            <span class="price">¥10,000</span>
         </div>
         <div class="productBox">
          <%= image_tag "DSC02184.JPG", class:"list-pict" %> 
-          <span class="productName">cut design knit　</span>
+          <%# <span class="productName">cut design knit　</span>
            <span class="price">¥10,000</span>
         </div>
         <div class="productBox">
          <%= image_tag "DSC02144.JPG", class:"list-pict" %>  
-          <span class="productName">indigo cardigan</span>
+          <%# <span class="productName">indigo cardigan</span>
            <span class="price">¥10,000</span>
       </div>
-     </div> 
+     </div>  %> 
 
+   <div class="product">
       <ul class='item-lists'>
       <% @products.each do |i| %>
        <li class='list'>
@@ -111,8 +112,9 @@
         <% end %>
       <% end %>
      </ul>
+    </div>
    </div>
- </div>
+  </div>
 
    <footer>
         <div class="bland">
