@@ -50,13 +50,15 @@
 
 
 .item-red-btn {
-  text-align: center;
-  background-color: #ea352d;
-  font-size: 24px;
-  font-weight: bold;
-  color: #FFF;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
+    text-align: center;
+    background-color: #ea352d;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+    margin: 20px 0px;
+    padding: 3vh 10vw;
+    border: 40px;
+    display: block;
 }
 
 .or-text {
@@ -64,12 +66,14 @@
 }
 
 .item-destroy {
-  background-color: lightgray;
-  text-align: center;
-  font-size: 24px;
-  color: black;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
+
+    background-color: #444444;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin: 30px 0px;
+    padding: 2vh 10vw;
+    display: block;
 }
 
 .item-explain-box {
@@ -142,8 +146,8 @@
 
 .comment-btn {
   line-height: 48px;
-  background-color: #3CCACE;
-  border: 1px solid #3CCACE;
+  background-color: lightgrey;
+  border: 1px solid lightgray;
   color: #fff;
   width: 50%;
   min-width: 150px;
@@ -166,7 +170,7 @@
 .another-item {
   display: block;
   margin: 30px 0px 8px;
-  color: #3CCACE;
+  color: black;
   text-decoration: none;
   font-weight: bold;
   font-size: 23px;
