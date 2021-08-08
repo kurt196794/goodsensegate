@@ -2,18 +2,18 @@
 <div class='main'>
 
        <% if user_signed_in? %>
-         <div class="sign-up"> 
-         <%= link_to  "#{current_user.nickname}" , class: "user-nickname" %>
+         <div class="sign_up"> 
+         <%= link_to  current_user.nickname, class:"log_out" %>
          </div>
-         <div class="log_out">
-         <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout"  %>
+         <div class="log_in">
+         <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "log_out"  %>
          </div> 
        <% else %>
          <div class="log_in">
          <%= link_to 'Login', new_user_session_path, class: "log_out" %>
          </div>
-         <div class="sign_up">
-         <%= link_to '新規登録', new_user_registration_path, class: "signup" %>
+         <div class="log_in">
+         <%= link_to '新規登録', new_user_registration_path, class: "log_out" %>
          </div>
       <% end %>
  
@@ -28,7 +28,7 @@
      <%= render "other/logo" %>
 
      <div class='gnav'>
-      <li><%= link_to 'Category', "#", class: "category-list" %></li> 
+      <li><%= link_to 'Category', "#", class: "brand-list" %></li> 
       <li><%= link_to 'Brand', "#", class: "brand-list" %></li>
       <li><%= link_to 'Mens', "#", class: "brand-list" %></li>
       <li><%= link_to 'Women', "#", class: "brand-list" %></li>

@@ -51,7 +51,7 @@
 
 .item-red-btn {
     text-align: center;
-    background-color: #ea352d;
+    background-color: crimson;
     font-size: 20px;
     font-weight: bold;
     color: #FFF;
@@ -90,16 +90,16 @@
 .detail-item {
   width: 20%;
   background-color: #eee;
-  border: 1px solid #dedede;
-  font-size: 14px;
+  border: 2px solid #353030;
+  font-size: 13px;
   text-align: center;
 }
 
 .detail-value {
   width: 80%;
   padding: 20px;
-  border: 1px solid #dedede;
-  font-size: 14px;
+  border: 2px solid #353030;
+  font-size: 15px;
 }
 
 
@@ -125,7 +125,6 @@
 }
 
 
-/* /商品の概要 */
 
 .comment-box {
   width: 40vw;
@@ -174,4 +173,8 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 23px;
+}
+
+.product-name{
+  text-align: center;
 }

@@ -21,6 +21,7 @@ a {
 
 
 
+
 .service-title {
   font-size: 8vh;
 }
@@ -30,11 +31,13 @@ a {
   line-height: 40px;
 }
 
-.sign-up {
-  float: right;
-  text-align: right;
-  padding-right: 2rem;
-  font-size: 20px;
+.sign_up {
+    float: right;
+   text-align: right;
+    padding-right: 2rem;
+    display: block;
+   font-size: 20px;
+   ;
 }
 
 
@@ -53,6 +56,7 @@ a {
   width: 5%;
   float: right;
   clear: right;
+  display: block;
 }
 
 .log_out:after, .sign-up:after{
@@ -102,6 +106,10 @@ a {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
+}
+
+.brand-list{
+  color: #000;
 }
 
 .product {
