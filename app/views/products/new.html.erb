@@ -1,13 +1,10 @@
 <%= render "other/logo" %>
 
 <div class="items-sell-contents">
-  <%# <header class="items-sell-header">
-  </header> %>
+
 
 
   <div class="items-sell-main">
-
-    <%# <h2 class="items-sell-title">Edit  Page</h2> %>
 
     <%= form_with model: @product,local: true do |f| %>
 
@@ -17,7 +14,6 @@
     <div class="img-upload">
       <div class="weight-bold-text">
         画像<a class="asterisk" href="#">※</a>
-        <%# <span class="indispensable">必須</span> %>
       </div>
       <div class="click-upload">
         <p>
@@ -31,13 +27,11 @@
     <div class="new-items">
       <div class="weight-bold-text">
         商品名<a class="asterisk" href="#">※</a>
-        <%# <span class="indispensable">必須</span> %>
       </div>
       <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字以内)", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
           商品の説明、詳細<a class="asterisk" href="#">※</a>
-          <%# <span class="indispensable">必須</span> %>
         </div>
         <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、注意点、vintageの場合は年代、劣化などあれば詳しく記載）例）80年代のオイルドジャケットです。袖、襟に劣化がありますがまだまだ着用いただける状態です。",rows:"7" ,maxlength:"1000" %>
       </div>
@@ -49,12 +43,10 @@
       <div class="form">
         <div class="weight-bold-text">
           MENS/Womens<a class="asterisk" href="#">※</a>
-          <%# <span class="indispensable">必須</span> %>
         </div>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
         <div class="weight-bold-text">
            Category<a class="asterisk" href="#">※</a>
-          <%# <span class="indispensable">必須</span> %>
         </div>
         <%= f.collection_select(:smallcategory_id, Smallcategory.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
       </div>
@@ -65,22 +57,18 @@
     <div class="items-detail">
       <div class="weight-bold-text question-text">
         <span>配送について</span>
-        <%# <a class="question" href="#">?</a> %>
       </div>
       <div class="form">
         <div class="weight-bold-text">
           配送料の負担<a class="asterisk" href="#">※</a>
-          <%# <span class="indispensable">必須</span> %>
         </div>
         <%= f.collection_select(:shipping_id, Shipping.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
         <div class="weight-bold-text">
           発送元の地域<a class="asterisk" href="#">※</a>
-          <%# <span class="indispensable">必須</span> %>
         </div>
         <%= f.collection_select(:delivery_area_id, DeliveryArea.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
         <div class="weight-bold-text">
           発送までの日数<a class="asterisk" href="#">※</a>
-          <%# <span class="indispensable">必須</span> %>
         </div>
         <%= f.collection_select(:delivery_date_id, DeliveryDate.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
       </div>
@@ -91,13 +79,11 @@
     <div class="sell-price">
       <div class="weight-bold-text question-text">
         <span>販売価格<br>(¥300〜9,999,999)</span>
-        <%# <a class="question" href="#">?</a> %>
       </div>
       <div>
         <div class="price-content">
           <div class="price-text">
             <span class="price-texts">価格<a class="asterisk" href="#">※</a></span>
-            <%# <span class="indispensable">必須</span> %>
           </div>
           <span class="sell-yen">¥</span>
           <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
@@ -141,7 +127,7 @@
       <%= f.submit "出品する",class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
-    
+
   </div>
 
   <% end %>

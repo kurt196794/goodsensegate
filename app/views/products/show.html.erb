@@ -68,7 +68,6 @@
       </div> %>
       <%# <div class="report-btn">
         <%#= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <%# <span>不適切な商品の通報</span> %>
       </div> 
     </div>
   </div>
@@ -84,23 +83,15 @@
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
       </p> %>
       <button type="submit" class="comment-btn">
-        <%#= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+    
         <span>コメント<span>
       </button>
     </form>
   </div>
 
        <% if @product.soldout.present? %>
- 　　　<%= link_to "出品の取り消し", product_path(@product), method: :delete, class:"item-destroy" %>
+      <%= link_to "出品の取り消し", product_path(@product), method: :delete, class:"item-destroy" %>
        <%end%>
-  <%# <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
-  </div> %>
  
   <%# <a href="#" class="another-item"><%= @product.category.nameをもっと見る</a>  %>
   <%= link_to "TOPPAGEへ戻る", root_path, method: :get, class: "another-item" %>
