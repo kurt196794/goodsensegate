@@ -157,21 +157,27 @@ footer {
 }
 
 .bland-list li{
-  width: calc(100% / 5);
+    cursor: pointer;
+    width: calc(100% / 5);
     margin-bottom: 1.5rem;
     padding: 0 2rem;
     box-sizing: border-box;
     list-style: none;
+
 }
 
 .ft-menu {
   margin-top: 10rem;
+  text-align: left;
+  width: 100%;
 }
 
-.ft-menu .title {
-  margin: 2rem 0;
-  font-weight: bold;
-}
+// .ft-menu .title {
+//   margin: 2rem 0;
+//   cursor: pointer;
+//   font-size: 13px;
+
+// }
 
 .list-pict, .item-img {
     width: 75%;
@@ -360,4 +366,16 @@ footer {
   margin-top: 40%;
   margin-right: 15px;
   display: block;
+}
+
+.copyright{
+  font-size: 1.3px;
+  text-align: center;
+  margin: 10px;
+}
+
+.ft-menu-t{
+  font-size: 13px;
+  cursor: pointer;
+  margin: 10px;
 }

@@ -90,7 +90,8 @@
           <a class="asterisk" href="#">※</a>
           <%# <span class="indispensable">必須</span> %>
         </div>
-        <%= f.collection_select(:delivery_area_id, DeliveryArea.all, :id, :name,{class:"select-box", id:"prefecture"}) %>
+         <%= f.collection_select(:delivery_area_id, DeliveryArea.all, :id, :name, {}, {class:"input-default", id:"item-prefecture"}) %> 
+         <%# <%= f.collection_select(:delivery_area_id, DeliveryArea.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %> 
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
@@ -126,9 +127,10 @@
     </div>
     <div class='buy-btn'>
       <%= f.submit "購入" ,class:"buy-red-btn" %>
-      <%= link_to "戻る", product_path(@product), method: :get %>
+      <%= link_to "戻る", product_path(@product), method: :get, class:"register-re-btn"   %>
     </div>
     <% end %>
   </div>
 </div>
 <%#= render "shared/second-footer"%>
+<%= render "other/copyright" %>
