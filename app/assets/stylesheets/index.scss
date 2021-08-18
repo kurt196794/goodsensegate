@@ -431,4 +431,28 @@ footer {
   font-size: 1.3rem;
 }
 
+.purchase-btn{
+  margin-top: 2.5rem;
+}
+.sell_btn{
+  height: 100px;
+}
+
+.bland-list{
+  flex-wrap: wrap;
+}
+
+.bland-list li{
+  width: calc(100% / 3);
+}
+
+footer{
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.ft-menu{
+  margin: 5rem 0 3rem;
+}
+
 }
