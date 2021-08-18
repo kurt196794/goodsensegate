@@ -10,7 +10,6 @@ body{
 
 .main{
   width: 100%;
-  min-width: 1000px;
   margin: auto;
   box-sizing: border-box;
 }
@@ -372,4 +371,64 @@ footer {
   font-size: 13px;
   cursor: pointer;
   margin: 10px;
+}
+
+@media (min-width: 769px) {
+  .main{
+     max-width: 1000px; 
+
+  }  
+
+.sp{
+  display: none;
+}
+
+
+}
+
+
+
+@media (max-width: 768px) {
+  .sp{
+    display: block;
+  }
+
+.pc{
+  display: none;
+}
+
+.gnav{
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.gnav li{
+  width: 9rem;
+  margin: 1rem;
+}
+
+.newitems{
+  margin: 7rem 0 1.5rem;
+}
+
+.product{
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.productBox{
+  width: 47%;
+  margin: 0.5rem;
+}
+
+.productName, .price, .item-name{
+  padding-left: 1rem;
+
+}
+
+.productName{
+  font-size: 1.3rem;
+}
+
 }
