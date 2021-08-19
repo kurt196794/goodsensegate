@@ -11,8 +11,6 @@
 .item-box {
   background-color: #FFF;
   width: 70vw;
-  min-width: 1200px;
-  padding: 10vh 15vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +150,7 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 100px;
-  margin-bottom: 2vh;
+  margin: 2rem;
 }
 
 .comment-flag {
@@ -177,4 +175,54 @@
 
 .product-name{
   text-align: center;
+}
+
+@media (min-width: 769px) {
+  .item-box{
+    min-width: 1200px;
+    padding: 10vh 15vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-show, .item-box{
+    width: 100%;
+    padding: 0;
+
+  }
+
+  .item-box{
+    display: block;
+  }
+
+  .item-box-img{
+    width: 90%;
+    background-color: #fff;
+  }
+
+  .item-red-btn, .item-destroy{
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.6rem;
+  }
+
+  .comment-text{
+    width: 90%;
+  }
+
+  .comment-box{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .comment-btn{
+    margin-top: 2rem;
+  }
+  
+  .another-item{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
 }
